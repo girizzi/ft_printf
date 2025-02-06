@@ -6,11 +6,12 @@
 /*   By: girizzi <girizzi@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:17:51 by girizzi           #+#    #+#             */
-/*   Updated: 2025/02/05 16:23:37 by girizzi          ###   ########.fr       */
+/*   Updated: 2025/02/06 19:55:10 by girizzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	which_format(va_list args, const char format)
 {
@@ -22,7 +23,7 @@ int	which_format(va_list args, const char format)
 	else if (format == 's')
 		count += ft_print_str(va_arg(args, char *));
 	else if (format == 'p')
-		count += ft_print_ptr(va_arg(args, unsigned long long));
+		count += ft_print_ptr(va_arg(args, void *));
 	else if (format == 'd' || format == 'i')
 		count += ft_print_nbr(va_arg(args, int));
 	else if (format == 'u')
