@@ -6,20 +6,13 @@
 /*   By: girizzi <girizzi@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 16:09:50 by girizzi           #+#    #+#             */
-/*   Updated: 2025/02/06 18:46:04 by girizzi          ###   ########.fr       */
+/*   Updated: 2025/02/06 21:31:27 by girizzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // This function prints a number in hexadecimal format.
 
 #include "ft_printf.h"
-
-// static void	ft_put_hex(unsigned int num, const char *base)
-// {
-// 	if (num >= 16)
-// 		ft_put_hex(num / 16, base);
-// 	ft_print_char(base[num % 16]);
-// }
 
 static int	ft_hex_len(unsigned int num)
 {

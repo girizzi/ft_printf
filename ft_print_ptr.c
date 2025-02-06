@@ -6,7 +6,7 @@
 /*   By: girizzi <girizzi@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 15:55:27 by girizzi           #+#    #+#             */
-/*   Updated: 2025/02/06 21:13:06 by girizzi          ###   ########.fr       */
+/*   Updated: 2025/02/06 21:32:02 by girizzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,36 +42,3 @@ int	ft_print_ptr(void *ptr)
 
 	return (count);
 }
-
-// void	ft_add_ptr(void *ptr)
-// {
-// 	unsigned long	add;
-
-// 	add = (unsigned long)ptr;
-// 	write(1, "0x", 2);
-// 	ft_print_hex(add, 0);
-// }
-
-// int	ft_print_ptr(void *ptr)
-// {
-// 	int				count;
-// 	unsigned long	tmp;
-
-// 	count = 2;
-// 	tmp = (unsigned long)ptr;
-// 	if (tmp == 0)
-// 	{
-// 		write(1, "(nil)", 5);
-// 		count = 5;
-// 	}
-// 	else
-// 	{
-// 		ft_add_ptr(ptr);
-// 		while (tmp > 0)
-// 		{
-// 			count++;
-// 			tmp /= 16;
-// 		}
-// 	}
-// 	return (count);
-// }
