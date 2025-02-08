@@ -6,12 +6,11 @@
 /*   By: girizzi <girizzi@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 18:17:51 by girizzi           #+#    #+#             */
-/*   Updated: 2025/02/06 19:55:10 by girizzi          ###   ########.fr       */
+/*   Updated: 2025/02/08 18:40:42 by girizzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	which_format(va_list args, const char format)
 {
@@ -29,12 +28,18 @@ int	which_format(va_list args, const char format)
 	else if (format == 'u')
 		count += ft_print_unsigned(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
-		count += ft_print_hex(va_arg(args, unsigned int), format == 'X');
+		count += ft_print_hex(va_arg(args, unsigned int), format == 'X'); // if format is 'X', pass 1, otherwise pass 0
 	else if (format == '%')
 		count += ft_print_char('%');
 	else
 		return (-1);
 	return (count);
+}
+
+int	ft_print_char(char c)
+{
+	write(1, &c, 1);
+	return (1);
 }
 
 int	ft_printf(const char *format, ...)
